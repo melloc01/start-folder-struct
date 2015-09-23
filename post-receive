@@ -1,0 +1,10 @@
+echo ==== deploying application =====
+echo ========= checking out =========
+
+git --work-tree=/var/www/projeto/api/src --git-dir=/var/www/projeto/api/repository.git checkout -f
+
+echo ========= installing dependencies =========
+
+( cd /var/www/projeto/api/src && composer install && php artisan migrate   )
+
+echo =========== complete ===========
