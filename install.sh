@@ -37,3 +37,6 @@ echo "echo \"\"" >> post-receive
 echo "echo =========== Complete ===========" >> post-receive
 echo "echo \"\"" >> post-receive
 echo "echo \"\"" >> post-receive
+
+git init --bare repository.git
+mv post-receive ./repository.git/hooks/
