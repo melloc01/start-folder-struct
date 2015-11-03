@@ -1,6 +1,6 @@
 #!/bin/bash   
 
-FULL_PROJECT_PATH=$1
+FULL_PROJECT_PATH=`pwd`
 
 rm post-receive
 
@@ -20,7 +20,7 @@ echo "" >> post-receive;
 
 echo "echo ========= Deploying =========" >> post-receive
 
-TYPE=$2
+TYPE=$1
 
 if [ $TYPE = "api" ]; then	
 	echo "( cd $FULL_PROJECT_PATH/src && composer install )" >> post-receive

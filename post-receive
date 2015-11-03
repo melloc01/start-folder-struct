@@ -2,14 +2,14 @@ echo ""
 echo ""
 
 echo ========= Cheking Out =========
-git --work-tree=/var/www/savoir/api/src --git-dir=/var/www/savoir/api/repository.git checkout -f
+git --work-tree=/home/dev/Projetos/start/src --git-dir=/home/dev/Projetos/start/repository.git checkout -f
 
 echo ""
 echo ""
 
 
 echo ========= Deploying =========
-( cd /var/www/savoir/api/src && npm i && bower i && gulp prod )
+( cd /home/dev/Projetos/start/src && npm i && bower i && gulp prod )
 
 
 echo ""
