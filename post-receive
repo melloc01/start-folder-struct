@@ -1,10 +1,19 @@
-echo ==== deploying application =====
-echo ========= checking out =========
+echo ""
+echo ""
 
-git --work-tree=/var/www/projeto/api/src --git-dir=/var/www/projeto/api/repository.git checkout -f
+echo ========= Cheking Out =========
+git --work-tree=/var/www/savoir/api/src --git-dir=/var/www/savoir/api/repository.git checkout -f
 
-echo ========= installing dependencies =========
+echo ""
+echo ""
 
-( cd /var/www/projeto/api/src && composer install && php artisan migrate   )
 
-echo =========== complete ===========
+echo ========= Deploying =========
+( cd /var/www/savoir/api/src && npm i && bower i && gulp prod )
+
+
+echo ""
+echo ""
+echo =========== Complete ===========
+echo ""
+echo ""
